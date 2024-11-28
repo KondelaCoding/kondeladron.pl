@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-start justify-center min-h-screen relative">
+    <div className="flex flex-col items-center justify-center relative pt-20">
       <div className="relative w-full flex justify-center items-center flex-grow">
         <h1
           className={`text-[150px] font-black text-[color:var(--lightgray-color)] absolute duration-500 delay-200 ${
@@ -32,7 +32,7 @@ const Hero = () => {
         />
       </div>
       <div
-        className={`flex flex-col items-center justify-start flex-grow gap-5 duration-500 ${
+        className={`flex flex-col items-center justify-start flex-grow gap-5 mt-80 duration-500 ${
           isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
