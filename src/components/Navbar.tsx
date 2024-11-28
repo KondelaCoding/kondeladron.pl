@@ -11,29 +11,48 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
       <div
-        className={`px-5 py-2 bg-[var(--background)] flex justify-between items-center duration-300 ${
+        className={`px-5 py-2 flex justify-between items-center duration-300 md:px-20 lg:px-40 ${
           isChecked ? "bg-[var(--black-color)]" : "bg-[var(--background)]"
         }`}
       >
         <div>
           <Image src={Logo} alt="logo" width={250} />
         </div>
-        <label>
-          <div className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center scale-[175%]">
-            <input
-              className="hidden peer"
-              type="checkbox"
-              checked={isChecked}
-              onChange={() => setIsChecked(!isChecked)}
-            />
-            <div className="w-[50%] h-[2px] bg-[var(--white-color)] rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]" />
-            <div className="w-[50%] h-[2px] bg-[var(--white-color)] rounded-md transition-all duration-300 origin-center peer-checked:hidden" />
-            <div className="w-[50%] h-[2px] bg-[var(--white-color)] rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]" />
-          </div>
-        </label>
+        {/* Hamburger menu for small screens */}
+        <div className="md:hidden">
+          <label>
+            <div className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center scale-[175%]">
+              <input
+                className="hidden peer"
+                type="checkbox"
+                checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)}
+              />
+              <div className="w-[50%] h-[2px] bg-[var(--white-color)] rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem] peer-checked:rotate-[-45deg]" />
+              <div className="w-[50%] h-[2px] bg-[var(--white-color)] rounded-md transition-all duration-300 origin-center peer-checked:hidden" />
+              <div className="w-[50%] h-[2px] bg-[var(--white-color)] rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]" />
+            </div>
+          </label>
+        </div>
+        {/* Navigation links for larger screens */}
+        <ul className="hidden md:flex space-x-8">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/services">Services</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
       </div>
+      {/* Dropdown menu for small screens */}
       <div
-        className={`fixed top-0 left-0 w-full pt-20 flex flex-col items-center justify-center duration-300 -z-10 ${
+        className={`md:hidden fixed top-0 left-0 w-full pt-20 flex flex-col items-center justify-center duration-300 -z-10 ${
           isChecked ? "translate-y-0 bg-[var(--black-color)]" : "-translate-y-full bg-[var(--background)]"
         }`}
       >
