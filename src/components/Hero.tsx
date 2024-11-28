@@ -13,8 +13,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center relative pt-20">
-      <div className="relative w-full flex justify-center items-center flex-grow">
+    <div className="flex flex-col items-center justify-center relative pt-20 overflow-hidden">
+      <div className="relative w-full flex justify-center items-center flex-grow lg:scale-150">
         <h1
           className={`text-[150px] font-black text-[color:var(--lightgray-color)] absolute duration-500 delay-200 ${
             isMounted ? "top-0 opacity-40" : "top-10 opacity-0"
@@ -32,7 +32,7 @@ const Hero = () => {
         />
       </div>
       <div
-        className={`flex flex-col items-center justify-start flex-grow gap-5 mt-80 duration-500 ${
+        className={`flex flex-col items-center justify-start flex-grow gap-5 mt-80 duration-500 lg:mt-[400px] ${
           isMounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -41,6 +41,7 @@ const Hero = () => {
           Profesjonalne filmowanie dronem dla Ciebie!
         </p>
         <Button />
+        {/* fotografia filmowanie inspiracja */}
       </div>
     </div>
   );
