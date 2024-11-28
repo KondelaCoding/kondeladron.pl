@@ -1,16 +1,42 @@
+"use client";
+
 import Image from "next/image";
-import Logo from "../img/logo.png";
+import Drone from "../img/drone.png";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
-    <div className="w-screen h-screen  bg-cover flex justify-between flex-col items-center">
-      <Image src={Logo} width={500} alt="logo-image" />
-      <h1>Żyj z lotu ptaka</h1>
-      <div className="w-full grid grid-cols-2 h-32 overflow-hidden"></div>
+    <div className="flex flex-col items-start justify-center min-h-screen relative">
+      <div className="relative w-full flex justify-center items-center flex-grow">
+        <h1
+          className={`text-[150px] font-black text-[color:var(--lightgray-color)] absolute duration-500 delay-100 ${
+            isMounted ? "top-0 opacity-40" : "top-10 opacity-0"
+          }`}
+        >
+          Dron
+        </h1>
+        <Image
+          src={Drone}
+          alt="dron"
+          width={300}
+          className={`absolute drop-shadow-[0_0_20px_rgba(0,0,0,0.7)] duration-500 ${
+            isMounted ? "top-10 opacity-100" : "top-20 opacity-0"
+          }`}
+        />
+      </div>
+      <div className="flex flex-col items-center justify-start flex-grow gap-5">
+        <h2 className="text-center text-4xl tracking-tighter">Twój świat z innej perspektywy </h2>
+        <p className="text-[color:var(--lightgray-color)] text-center text-xl font-light">
+          Profesjonalne filmowanie dronem dla Ciebie!
+        </p>
+      </div>
     </div>
   );
 };
 
 export default Hero;
-
-// bg-[url('../img/hero.jpg')]
