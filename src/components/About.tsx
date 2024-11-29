@@ -4,7 +4,6 @@ import Image from "next/image";
 import Boat from "../img/boat.jpg";
 import Bridge from "../img/bridge.jpg";
 import AboutDesktop from "../img/about-desktop.png";
-import Drone from "../img/drone.png";
 
 const About = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -23,13 +22,14 @@ const About = () => {
         { threshold: 0.1 }
       );
 
-      if (ref.current) {
-        observer.observe(ref.current);
+      const currentRef = ref.current;
+      if (currentRef) {
+        observer.observe(currentRef);
       }
 
       return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
+        if (currentRef) {
+          observer.unobserve(currentRef);
         }
       };
     }, []);
