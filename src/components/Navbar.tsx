@@ -37,10 +37,10 @@ const Navbar = () => {
         {/* Navigation links for larger screens */}
         <ul className="hidden md:flex space-x-8">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="#start">Start</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="#about">About</Link>
           </li>
           <li>
             <Link href="/services">Services</Link>
@@ -58,16 +58,24 @@ const Navbar = () => {
       >
         <ul className="text-center">
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
-            <Link href="/">Home</Link>
+            <Link onClick={() => setIsChecked(false)} href="#start">
+              Start
+            </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
-            <Link href="/about">About</Link>
+            <Link onClick={() => setIsChecked(false)} href="#about">
+              About
+            </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
-            <Link href="/services">Services</Link>
+            <Link onClick={() => setIsChecked(false)} href="/services">
+              Services
+            </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
-            <Link href="/contact">Contact</Link>
+            <Link onClick={() => setIsChecked(false)} href="/contact">
+              Contact
+            </Link>
           </li>
         </ul>
       </div>

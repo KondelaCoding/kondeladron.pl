@@ -64,7 +64,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="mt-40">
+    <div id="about" className="mt-40">
       <div
         ref={ref1}
         className={`px-5 transition-all duration-1000 transform ${

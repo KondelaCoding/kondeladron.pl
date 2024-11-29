@@ -11,6 +11,10 @@
   --background: #282828;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--white-color);
   background: var(--background);
