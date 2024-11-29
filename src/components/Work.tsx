@@ -20,13 +20,15 @@ const Work = () => {
         { threshold: 0.1 }
       );
 
-      if (ref.current) {
-        observer.observe(ref.current);
+      const currentRef = ref.current;
+
+      if (currentRef) {
+        observer.observe(currentRef);
       }
 
       return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
+        if (currentRef) {
+          observer.unobserve(currentRef);
         }
       };
     }, []);
@@ -40,8 +42,8 @@ const Work = () => {
   const [refGrid, isInViewGrid] = useInView();
 
   return (
-    <div className="bg-[var(--white-color)] text-[color:var(--black-color)] px-5">
-      {/* Title with Entry Effect */}
+    <div id="work" className="bg-[var(--white-color)] text-[color:var(--black-color)] px-5">
+      <div className="h-20 w-full"></div>
       <div
         ref={refTitle}
         className={`transition-all duration-1000 transform ${
@@ -51,7 +53,6 @@ const Work = () => {
         <h2 className="text-center text-4xl tracking-tighter">Prace</h2>
       </div>
 
-      {/* Paragraph with Entry Effect */}
       <div
         ref={refParagraph}
         className={`mt-5 transition-all duration-1000 transform ${
@@ -63,7 +64,6 @@ const Work = () => {
         </p>
       </div>
 
-      {/* Grid with Entry Effect */}
       <div
         ref={refGrid}
         className={`grid grid-cols-1 gap-5 mt-10 md:grid-cols-2 transition-all duration-1000 transform ${

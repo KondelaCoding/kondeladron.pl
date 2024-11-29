@@ -68,10 +68,11 @@ const About = () => {
 
   return (
     <div id="about" className="relative">
+      <div className="h-10 w-full"></div>
       <Image
         src={Bgackground}
         alt="background-decoration"
-        className="hidden absolute top-1/2 right-0 -scale-x-100 -translate-y-1/2 mt-5 xl:block"
+        className="hidden absolute top-1/2 right-0 -scale-x-100 -translate-y-1/2 mt-28 xl:block"
       />
       <div className="flex justify-center gap-20 mt-40 mx-auto xl:max-w-[1200px]">
         <div>

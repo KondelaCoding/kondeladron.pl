@@ -40,10 +40,10 @@ const Navbar = () => {
             <Link href="#start">Start</Link>
           </li>
           <li>
-            <Link href="#about">About</Link>
+            <Link href="#about">O nas</Link>
           </li>
           <li>
-            <Link href="/services">Services</Link>
+            <Link href="#work">Prace</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>
@@ -64,12 +64,12 @@ const Navbar = () => {
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
             <Link onClick={() => setIsChecked(false)} href="#about">
-              About
+              O nas
             </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
-            <Link onClick={() => setIsChecked(false)} href="/services">
-              Services
+            <Link onClick={() => setIsChecked(false)} href="#work">
+              Prace
             </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">

@@ -40,7 +40,7 @@ const Hero = () => {
       >
         <h2 className="text-center text-4xl tracking-tighter">Twój świat z innej perspektywy</h2>
         <p className="text-[color:var(--lightgray-color)] text-center text-xl font-light mb-5">
-          Profesjonalne filmowanie dronem dla Ciebie!
+          Profesjonalne filmowanie dronem <span className="text-[color:var(--primary-color)]">dla Ciebie!</span>
         </p>
         <Button />
         {/* fotografia filmowanie inspiracja */}
