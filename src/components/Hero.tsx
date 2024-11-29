@@ -4,6 +4,7 @@ import Image from "next/image";
 import Drone from "../img/drone.png";
 import Button from "./Button";
 import { useEffect, useState } from "react";
+import Bgackground from "../img/bg-decoration.png";
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -14,6 +15,7 @@ const Hero = () => {
 
   return (
     <div id="start" className="flex flex-col items-center justify-center relative pt-20 overflow-hidden">
+      <Image src={Bgackground} alt="background-decoration" className="hidden absolute left-0 bottom-20 md:block" />
       <div className="relative w-full flex justify-center items-center flex-grow lg:scale-150">
         <h1
           className={`text-[150px] font-black text-[color:var(--lightgray-color)] absolute duration-500 delay-200 ${
