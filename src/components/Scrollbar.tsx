@@ -21,7 +21,7 @@ const Scrollbar = () => {
   }, []);
 
   return (
-    <div className="hidden fixed top-80 -right-36 items-center gap-5 rotate-90 md:inline-flex">
+    <div className="hidden fixed top-80 -right-36 items-center gap-5 rotate-90 z-50 md:inline-flex">
       <p>Zobacz więcej</p>
       <div className="relative">
         <div className="h-[1px] w-32 bg-white"></div>
