@@ -66,7 +66,7 @@ const Work = () => {
 
       <div
         ref={refGrid}
-        className={`grid grid-cols-1 gap-5 mt-10 md:grid-cols-2 transition-all duration-1000 transform ${
+        className={`grid grid-cols-1 gap-5 mt-10 transition-all duration-1000 transform max-w-[1200px] mx-auto md:grid-cols-2 lg:grid-cols-3 ${
           isInViewGrid ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -95,6 +95,19 @@ const Work = () => {
               <Play size={50} fill="var(--black-color)" stroke="" className="ml-2" />
             </div>
           </div>
+        </div>
+        <div className="flex flex-col gap-5 md:hidden lg:flex">
+          <div className="relative aspect-[4/3] flex justify-center items-center">
+            <Image
+              src={Boat}
+              alt="boat-photo"
+              className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)] brightness-50 absolute top-0 left-0 w-full h-full object-cover"
+            />
+            <div className="h-20 w-20 bg-[var(--primary-color)] rounded-full z-10 flex justify-center items-center duration-200 hover:scale-110">
+              <Play size={50} fill="var(--black-color)" stroke="" className="ml-2" />
+            </div>
+          </div>
+          <Image src={Bridge} alt="bridge-photo" className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)]" />
         </div>
       </div>
     </div>
