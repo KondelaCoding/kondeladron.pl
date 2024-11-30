@@ -6,6 +6,7 @@ import Seperator from "../components/Seperator";
 import Work from "../components/Work";
 import Cta from "../components/Cta";
 import Faq from "../components/Faq";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Seperator to="black" />
       <Faq />
       <Seperator to="white" />
+      <Contact />
     </>
   );
 }
