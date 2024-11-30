@@ -46,6 +46,9 @@ const Navbar = () => {
             <Link href="#work">Prace</Link>
           </li>
           <li>
+            <Link href="#faq">Pytania</Link>
+          </li>
+          <li>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
@@ -70,6 +73,11 @@ const Navbar = () => {
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
             <Link onClick={() => setIsChecked(false)} href="#work">
               Prace
+            </Link>
+          </li>
+          <li className="my-5 text-3xl duration-200 hover:opacity-50">
+            <Link onClick={() => setIsChecked(false)} href="#faq">
+              Pytania
             </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
