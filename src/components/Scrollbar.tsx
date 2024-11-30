@@ -22,15 +22,15 @@ const Scrollbar = () => {
 
   return (
     <div className="hidden fixed top-80 -right-36 items-center gap-5 rotate-90 z-50 md:inline-flex">
-      <p>Zobacz więcej</p>
+      <p className="drop-shadow-[1px_1px_0_rgba(0,0,0,0.5)]">Zobacz więcej</p>
       <div className="relative">
-        <div className="h-[1px] w-32 bg-white"></div>
+        <div className="h-[1px] w-32 bg-white drop-shadow-[0_0_1px_rgba(0,0,0,1)]"></div>
         <div
-          className="absolute w-5 h-5 bg-white rounded-full top-1/2 -translate-y-1/2 transition-all duration-300"
+          className="absolute w-5 h-5 bg-white rounded-full top-1/2 -translate-y-1/2 transition-all duration-300 drop-shadow-[0_0_1px_rgba(0,0,0,1)]"
           style={{ left: `${distanceScrolled}%` }}
         ></div>
       </div>
-      <p>Zobacz więcej</p>
+      <p className="drop-shadow-[1px_1px_0_rgba(0,0,0,0.5)]">Zobacz więcej</p>
     </div>
   );
 };

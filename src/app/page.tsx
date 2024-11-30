@@ -4,6 +4,7 @@ import Scrollbar from "../components/Scrollbar";
 import About from "../components/About";
 import Seperator from "../components/Seperator";
 import Work from "../components/Work";
+import Cta from "../components/Cta";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <About />
       <Seperator to="white" />
       <Work />
+      <Cta />
+      <Seperator to="black" />
     </>
   );
 }

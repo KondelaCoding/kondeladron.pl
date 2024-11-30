@@ -42,7 +42,7 @@ const Work = () => {
   const [refGrid, isInViewGrid] = useInView();
 
   return (
-    <div id="work" className="bg-[var(--white-color)] text-[color:var(--black-color)] px-5">
+    <div id="work" className="bg-[var(--white-color)] text-[color:var(--black-color)] px-5 pb-32">
       <div className="h-20 w-full"></div>
       <div
         ref={refTitle}
