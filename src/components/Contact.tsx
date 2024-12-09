@@ -38,7 +38,11 @@ const Contact: FC = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center bg-[var(--white-color)] text-[color:var(--black-color)]">
+    <div
+      id="contact"
+      className="relative flex flex-col items-center bg-[var(--white-color)] text-[color:var(--black-color)]"
+    >
+      <div className="h-20 w-full"></div>
       <form onSubmit={handleSubmit(onSubmit)} className="p-8 w-full max-w-[700px]">
         <h2 className="text-center text-4xl tracking-tighter mb-10">Formularz</h2>
 

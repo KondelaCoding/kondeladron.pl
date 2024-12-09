@@ -49,7 +49,7 @@ const Navbar = () => {
             <Link href="#faq">Pytania</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="#contact">Kontakt</Link>
           </li>
         </ul>
       </div>
@@ -81,8 +81,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="my-5 text-3xl duration-200 hover:opacity-50">
-            <Link onClick={() => setIsChecked(false)} href="/contact">
-              Contact
+            <Link onClick={() => setIsChecked(false)} href="#contact">
+              Kontakt
             </Link>
           </li>
         </ul>
