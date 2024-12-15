@@ -8,7 +8,7 @@ const Scrollbar = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = (scrollTop / docHeight) * 100;
+      const scrolled = (scrollTop / docHeight) * 90;
       setDistanceScrolled(scrolled);
     };
 
