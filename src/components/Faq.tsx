@@ -1,11 +1,22 @@
+"use client";
+
+import useInView from "../../useInView";
 import Image from "next/image";
 import FaqImg from "../img/about-desktop.png";
 
 const Faq = () => {
+  // custom fade in effect
+  const [ref1, isInView1] = useInView();
+
   return (
     <div id="faq">
       <div className="h-20 w-full"></div>
-      <div className="grid px-5 max-w-[1200px] mx-auto gap-20 xl:grid-cols-2">
+      <div
+        ref={ref1}
+        className={`grid px-5 max-w-[1200px] mx-auto gap-20 duration-1000 xl:grid-cols-2 ${
+          isInView1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
         <div className="max-w-[700px] mx-auto">
           <h2 className="text-center text-4xl tracking-tighter mb-10 xl:text-left">Często zadawane pytania</h2>
           <ul className="flex flex-col gap-10">

@@ -21,8 +21,10 @@ const Footer = () => {
               <SocialIcon url="https://instagram.com" />
             </div>
           </div>
-          <div className="flex gap-x-10 gap-y-3 text-2xl flex-wrap justify-center text-nowrap xl:flex-col xl:text-[color:var(--lightgray-color)]">
-            <h2 className="text-3xl tracking-tighter text-[color:var(--white-color)] hidden xl:inline">Dowiedz się</h2>
+          <div className="flex gap-x-10 gap-y-3 text-xl flex-wrap justify-center text-nowrap xl:flex-col xl:text-[color:var(--lightgray-color)]">
+            <h2 className="text-3xl tracking-tighter text-[color:var(--white-color)] mb-5 hidden xl:inline">
+              Dowiedz się
+            </h2>
             <Link href="#start" className="duration-200 hover:text-[color:var(--primary-color)]">
               Start
             </Link>
@@ -39,8 +41,8 @@ const Footer = () => {
               Kontakt
             </Link>
           </div>
-          <div className=" hidden gap-x-10 gap-y-3 text-2xl flex-wrap justify-center text-nowrap xl:flex-col xl:text-[color:var(--lightgray-color)] xl:flex">
-            <h2 className="text-3xl tracking-tighter text-[color:var(--white-color)]">Informacje kontaktowe</h2>
+          <div className=" hidden gap-x-10 gap-y-3 text-xl flex-wrap justify-center text-nowrap xl:flex-col xl:text-[color:var(--lightgray-color)] xl:flex">
+            <h2 className="text-3xl tracking-tighter text-[color:var(--white-color)] mb-5">Informacje kontaktowe</h2>
             <Link href="mailto:info@kondeladron.com" className="duration-200 hover:text-[color:var(--primary-color)]">
               info@kondeladron.com
             </Link>
