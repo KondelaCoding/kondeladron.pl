@@ -1,6 +1,6 @@
 "use client";
 
-import useInView from "../../useInView";
+import useInView from "../utils/useInView";
 import Image from "next/image";
 import FaqImg from "../img/about-desktop.png";
 

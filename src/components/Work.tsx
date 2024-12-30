@@ -1,6 +1,6 @@
 "use client";
 
-import useInView from "../../useInView";
+import useInView from "../utils/useInView";
 import Image from "next/image";
 import Boat from "../img/boat.jpg";
 import Bridge from "../img/bridge.jpg";

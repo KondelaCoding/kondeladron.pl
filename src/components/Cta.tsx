@@ -1,6 +1,6 @@
 "use client";
 
-import useInView from "../../useInView";
+import useInView from "../utils/useInView";
 
 const Cta = () => {
   // custom fade in effect

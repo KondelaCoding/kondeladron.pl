@@ -1,6 +1,6 @@
 "use client";
 
-import useInView from "../../useInView";
+import useInView from "../utils/useInView";
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { sendEmail } from "../utils/send-email";
