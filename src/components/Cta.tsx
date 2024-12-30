@@ -22,9 +22,11 @@ const Cta = () => {
         <p className="text-[color:var(--black-color)] text-center text-xl font-light mt-5 max-w-[700px] mx-auto mb-10">
           Jesteśmy pasjonatami filmowania dronem, oferując usługi profesjonalnego rejestrowania obrazu z powietrza.
         </p>
-        <button className="px-10 py-3 bg-[var(--white-color)] text-[var(--black-color)] duration-100 shadow-lg mb-20 hover:bg-[#ffefc2] active:scale-95 active:opacity-80">
-          Skontaktuj się
-        </button>
+        <a href="#contact">
+          <button className="px-10 py-3 bg-[var(--white-color)] text-[var(--black-color)] duration-100 shadow-lg mb-20 hover:bg-[#ffefc2] active:scale-95 active:opacity-80">
+            Skontaktuj się
+          </button>
+        </a>
       </div>
     </div>
   );

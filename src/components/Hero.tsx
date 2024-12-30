@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Drone from "../img/drone.png";
-import Button from "./Button";
 import { useEffect, useState } from "react";
 import Bgackground from "../img/bg-decoration.png";
 
@@ -42,7 +41,11 @@ const Hero = () => {
         <p className="text-[color:var(--lightgray-color)] text-center text-xl font-light mb-5">
           Profesjonalne filmowanie dronem <span className="text-[color:var(--primary-color)]">dla Ciebie!</span>
         </p>
-        <Button />
+        <a href="#contact">
+          <button className="px-10 py-3 bg-[var(--primary-color)] text-[var(--black-color)] duration-100 shadow-lg mb-20 hover:bg-[#ffd666] active:scale-95 active:opacity-80">
+            Skontaktuj się
+          </button>
+        </a>
         {/* fotografia filmowanie inspiracja */}
       </div>
     </div>

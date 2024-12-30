@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import useInView from "../../useInView";
 import Image from "next/image";
 import Boat from "../img/boat.jpg";
 import Bridge from "../img/bridge.jpg";
@@ -10,60 +11,30 @@ const About = () => {
   const [offsetY, setOffsetY] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
 
-  // Custom hook for observing elements
-  const useInView = () => {
-    const [isInView, setIsInView] = useState(false);
-    const ref = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setIsInView(entry.isIntersecting);
-        },
-        { threshold: 0.1 }
-      );
-
-      const currentRef = ref.current;
-      if (currentRef) {
-        observer.observe(currentRef);
-      }
-
-      return () => {
-        if (currentRef) {
-          observer.unobserve(currentRef);
-        }
-      };
-    }, []);
-
-    return [ref, isInView] as const;
-  };
-
-  // Hook for the first section
+  // custom fade in effect
   const [ref1, isInView1] = useInView();
-  // Hook for the second section
   const [ref2, isInView2] = useInView();
 
-  // Handle window resize
   useEffect(() => {
+    // Handle window resize to get the propper image
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
 
-    handleResize(); // Set initial width
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Handle scroll for parallax effect
-  useEffect(() => {
+    // Handle scroll for parallax effect
     const handleScroll = () => {
       setOffsetY(window.scrollY);
     };
 
+    handleResize(); // Set initial width
+
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (

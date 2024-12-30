@@ -1,10 +1,6 @@
 import React from "react";
 
-interface SeperatorProps {
-  to: string;
-}
-
-const Seperator: React.FC<SeperatorProps> = ({ to }) => {
+const Seperator = ({ to }: { to: string }) => {
   return (
     <div
       className={`max-h-[200px] overflow-hidden bg-[${to === "white" ? "var(--background)" : "var(--white-color)"}]`}

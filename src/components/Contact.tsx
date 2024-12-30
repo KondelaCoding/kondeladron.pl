@@ -1,7 +1,7 @@
 "use client";
 
 import useInView from "../../useInView";
-import { useState, FC } from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { sendEmail } from "../utils/send-email";
 
@@ -11,7 +11,7 @@ export type FormData = {
   message: string;
 };
 
-const Contact: FC = () => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -22,6 +22,9 @@ const Contact: FC = () => {
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
+  // custom fade in effect
+  const [ref1, isInView1] = useInView();
+
   const onSubmit: SubmitHandler<FormData> = async (data) => {
     setIsSubmitting(true);
     setServerError(null);
@@ -31,15 +34,16 @@ const Contact: FC = () => {
       const message = await sendEmail(data);
       setSuccessMessage(message);
       reset(); // Reset form fields after successful submission
-    } catch (error: any) {
-      setServerError(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setServerError(error.message);
+      } else {
+        setServerError("An unknown error occurred.");
+      }
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  // custom fade in effect
-  const [ref1, isInView1] = useInView();
 
   return (
     <div
