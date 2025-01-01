@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import useInView from "../utils/useInView";
 import Image from "next/image";
-import Boat from "../img/boat.jpg";
-import Bridge from "../img/bridge.jpg";
-import AboutDesktop from "../img/about-desktop.png";
+import AboutDesktop1 from "../img/about-desktop1.png";
+import AboutDesktop2 from "../img/about-desktop2.png";
+import AboutMobileVertical from "../img/about-mobile-vertical.jpg";
+import AboutMobileHorizontal from "../img/about-mobile-horizontal.jpg";
 import Bgackground from "../img/bg-decoration.png";
 
 const About = () => {
@@ -65,7 +66,7 @@ const About = () => {
             <div className="relative bg-[var(--background)] h-52 -skew-y-6 -z-10 -mb-32 md:-mb-40"></div>
             <div className="relative w-full -z-20">
               <Image
-                src={screenWidth > 768 ? Boat : Bridge}
+                src={screenWidth > 768 ? AboutMobileHorizontal : AboutMobileVertical} // TODO update vertical to be vertical
                 width={1920}
                 height={1080}
                 alt="boat-photo"
@@ -102,17 +103,18 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden relative flex-grow-0 justify-center flex-col gap-20 items-start mt-10 xl:flex">
+        <div className="hidden relative flex-grow-0 justify-center flex-col gap-20 mt-10 xl:flex">
+          {/* TODO update photos to not have blank space on the right */}
           <Image
-            src={AboutDesktop}
-            alt="about-desktop"
+            src={AboutDesktop1}
+            alt="city-photo"
             width={600}
             height={400}
             className="max-w-full h-auto object-contain drop-shadow-[10px_10px_20px_rgba(0,0,0,0.3)]"
           />
           <Image
-            src={AboutDesktop}
-            alt="about-desktop"
+            src={AboutDesktop2}
+            alt="kids-playing-basketball-photo"
             width={600}
             height={400}
             className="max-w-full h-auto object-contain drop-shadow-[10px_10px_20px_rgba(0,0,0,0.3)] -scale-x-100"

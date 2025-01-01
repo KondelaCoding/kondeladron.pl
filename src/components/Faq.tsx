@@ -2,7 +2,7 @@
 
 import useInView from "../utils/useInView";
 import Image from "next/image";
-import FaqImg from "../img/about-desktop.png";
+import FaqImg from "../img/faq.png";
 
 const Faq = () => {
   // custom fade in effect
@@ -47,7 +47,7 @@ const Faq = () => {
         <div className="hidden h-full justify-center items-center xl:flex">
           <Image
             src={FaqImg}
-            alt="about-desktop"
+            alt="frozen-lake-photo"
             width={600}
             height={400}
             className="max-w-full h-auto object-contain drop-shadow-[10px_10px_20px_rgba(0,0,0,0.3)]"

@@ -3,7 +3,9 @@
 import useInView from "../utils/useInView";
 import Image from "next/image";
 import Boat from "../img/boat.jpg";
-import Bridge from "../img/bridge.jpg";
+import WorkVertical1 from "../img/work-vertical1.jpg";
+import WorkVertical2 from "../img/work-vertical2.jpg";
+import WorkVertical3 from "../img/work-vertical3.jpg";
 import { Play } from "react-feather";
 
 const Work = () => {
@@ -52,10 +54,18 @@ const Work = () => {
               <Play size={50} fill="var(--black-color)" stroke="" className="ml-2" />
             </div>
           </div>
-          <Image src={Bridge} alt="bridge-photo" className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)]" />
+          <Image
+            src={WorkVertical1}
+            alt="fountain-on-a-lake-photo"
+            className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)] aspect-[9/16]"
+          />
         </div>
         <div className="flex flex-col-reverse gap-5 md:flex-col">
-          <Image src={Bridge} alt="bridge-photo" className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)]" />
+          <Image
+            src={WorkVertical2}
+            alt="path-in-a-park-photo"
+            className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)] aspect-[9/16]"
+          />
           <div className="relative aspect-[4/3] flex justify-center items-center">
             <Image
               src={Boat}
@@ -78,7 +88,11 @@ const Work = () => {
               <Play size={50} fill="var(--black-color)" stroke="" className="ml-2" />
             </div>
           </div>
-          <Image src={Bridge} alt="bridge-photo" className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)]" />
+          <Image
+            src={WorkVertical3}
+            alt="road-photo"
+            className="drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)] aspect-[9/16]"
+          />
         </div>
       </div>
     </div>
