@@ -8,8 +8,8 @@ const Cta = () => {
 
   return (
     <div className="bg-[var(--white-color)] text-[color:var(--black-color)] flex flex-col items-center relative pt-32">
-      <div className="bg-[var(--primary-color)] h-96 w-full -skew-y-6 absolute top-10"></div>
-      <div className="bg-[var(--primary-color)] h-96 w-full -skew-y-6 absolute bottom-0"></div>
+      <div className="bg-[var(--primary-color)] h-96 w-full -skew-y-3 absolute top-10"></div>
+      <div className="bg-[var(--primary-color)] h-96 w-full -skew-y-3 absolute bottom-0"></div>
       <div
         ref={ref1}
         className={`z-10 flex flex-col items-center px-5 duration-1000 ${

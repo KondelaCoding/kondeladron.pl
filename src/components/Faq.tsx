@@ -13,7 +13,7 @@ const Faq = () => {
       <div className="h-20 w-full"></div>
       <div
         ref={ref1}
-        className={`grid px-5 max-w-[1200px] mx-auto gap-20 duration-1000 xl:grid-cols-2 ${
+        className={`grid px-5 pb-20 max-w-[1200px] mx-auto gap-20 duration-1000 xl:grid-cols-2 ${
           isInView1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >

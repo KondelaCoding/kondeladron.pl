@@ -33,7 +33,15 @@ const Work = () => {
         }`}
       >
         <p className="text-[color:var(--gray-color)] text-center text-xl font-light mt-5 max-w-[700px] mx-auto">
-          Zobacz nasze prace i przekonaj się, że warto nam zaufać!
+          Zobacz nasze prace i przekonaj się, że warto nam zaufać! <br /> Po więcej zapraszamy na nasz{" "}
+          <a href="" className="text-blue-600 underline">
+            Instagram
+          </a>{" "}
+          i{" "}
+          <a href="" className="text-blue-600 underline">
+            Facebook
+          </a>
+          .
         </p>
       </div>
 

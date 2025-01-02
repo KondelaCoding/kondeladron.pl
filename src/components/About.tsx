@@ -46,7 +46,7 @@ const About = () => {
         alt="background-decoration"
         className="hidden absolute top-1/2 right-0 -scale-x-100 -translate-y-1/2 mt-28 xl:block"
       />
-      <div className="flex justify-center gap-20 mt-40 mx-auto xl:max-w-[1200px]">
+      <div className="flex justify-center gap-20 mt-40 pb-20 mx-auto xl:max-w-[1200px]">
         <div>
           <div
             ref={ref1}
@@ -63,10 +63,10 @@ const About = () => {
           </div>
           {/* Parallax Image Section */}
           <div className="-mt-20 xl:hidden">
-            <div className="relative bg-[var(--background)] h-52 -skew-y-6 -z-10 -mb-32 md:-mb-40"></div>
+            <div className="relative bg-[var(--background)] h-52 -skew-y-3 -z-10 -mb-32 md:-mb-40"></div>
             <div className="relative w-full -z-20">
               <Image
-                src={screenWidth > 768 ? AboutMobileHorizontal : AboutMobileVertical} // TODO update vertical to be vertical
+                src={screenWidth > 768 ? AboutMobileHorizontal : AboutMobileVertical}
                 width={1920}
                 height={1080}
                 alt="boat-photo"
@@ -74,7 +74,7 @@ const About = () => {
                 style={{ transform: `translateY(${offsetY * 0.1}px)` }}
               />
             </div>
-            <div className="relative bg-[var(--background)] h-52 -skew-y-6 -z-10 -mb-32"></div>
+            <div className="relative bg-[var(--background)] h-52 -skew-y-3 -z-10 -mb-32"></div>
           </div>
           <div
             ref={ref2}
@@ -104,7 +104,6 @@ const About = () => {
           </div>
         </div>
         <div className="hidden relative flex-grow-0 justify-center flex-col gap-20 mt-10 xl:flex">
-          {/* TODO update photos to not have blank space on the right */}
           <Image
             src={AboutDesktop1}
             alt="city-photo"
