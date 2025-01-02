@@ -16,9 +16,9 @@ const Footer = () => {
               Twój świat <br /> z innej <br /> <span className="text-[color:var(--primary-color)]">perspektywy</span>
             </h2>
             <div className="flex gap-5">
-              <SocialIcon url="https://facebook.com" />
-              <SocialIcon url="https://youtube.com" />
-              <SocialIcon url="https://instagram.com" />
+              <SocialIcon url="https://www.facebook.com/Pafeu.dron" target="_blank" />
+              <SocialIcon url="https://youtube.com" target="_blank" />
+              <SocialIcon url="https://instagram.com" target="_blank" />
             </div>
           </div>
           <div className="flex gap-x-10 gap-y-3 text-xl flex-wrap justify-center text-nowrap xl:flex-col xl:text-[color:var(--lightgray-color)]">
@@ -43,11 +43,11 @@ const Footer = () => {
           </div>
           <div className=" hidden gap-x-10 gap-y-3 text-xl flex-wrap justify-center text-nowrap xl:flex-col xl:text-[color:var(--lightgray-color)] xl:flex">
             <h2 className="text-3xl tracking-tighter text-[color:var(--white-color)] mb-5">Informacje kontaktowe</h2>
-            <Link href="mailto:info@kondeladron.com" className="duration-200 hover:text-[color:var(--primary-color)]">
-              info@kondeladron.com
+            <Link href="mailto:kondela.dron@wp.pl" className="duration-200 hover:text-[color:var(--primary-color)]">
+              kondela.dron@wp.pl
             </Link>
-            <Link href="tel:+123456789" className="duration-200 hover:text-[color:var(--primary-color)]">
-              +123 456 789
+            <Link href="tel:+48667535310" className="duration-200 hover:text-[color:var(--primary-color)]">
+              +48 667 535 310
             </Link>
           </div>
         </div>
